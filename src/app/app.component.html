@@ -1,0 +1,24 @@
+<div class="main">
+  <div class="content">
+    <nav class="menu">
+      <a [routerLink]="[{ outlets: { primary: ['liste-articles'] } }]">
+        Liste articles
+      </a>
+      <a [routerLink]="[{ outlets: { primary: ['dashboard'] } }]">
+        Dashboard
+      </a>
+    </nav>
+    <router-outlet></router-outlet>
+  </div>
+
+  <div class="sidebar">
+    <router-outlet name="sidebar"></router-outlet>
+
+    <nav class="menu">
+      <a [routerLink]="[{ outlets: { sidebar: ['agenda'] } }]"> Agenda </a>
+      <a [routerLink]="[{ outlets: { sidebar: ['bloc-note'] } }]">
+        Bloc note
+      </a>
+    </nav>
+  </div>
+</div>
